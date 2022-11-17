@@ -30,10 +30,12 @@ class Calculate(QWidget):
         numgrid = QGridLayout()
         n=0
         m=0
+        
         for x in range(len(self.nums)):
             if x % 3 == 0:
                 m=0
                 n+=1
+                
             self.btn = QPushButton()
             self.btn.setMinimumSize(50, 25)
             self.btn.setText(str(self.nums[x]))
@@ -209,10 +211,6 @@ class Calculate(QWidget):
             elif txt[lng] == ")":
                 self.closer-=1
 
-            # all=""
-            # for x in range(lng):
-            #     all+=txt[x]
-            # self.textarea.setText(all)
             self.textarea.setText(txt[0:-1])
 
 
